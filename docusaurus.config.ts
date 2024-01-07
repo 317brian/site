@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Ramblings',
+  tagline: 'Learning to fail is kind of hard',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -15,8 +15,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'self', // Usually your GitHub org/user name.
+  projectName: 'site', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -35,17 +35,11 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -66,9 +60,14 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'bookSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Books',
+        },
+        {
+          to: '/milton',
+          label: 'Cat',
+          position: 'left'
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -82,28 +81,32 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Nav',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Books etc',
+              to: '/docs/intro',
+            },
+            {
+              label: 'Movies',
+              to: '/docs/intro',
+            },
+            {
+              label: 'Music',
+              to: '/docs/intro',
+            },
+            {
+              label: 'Pottery',
               to: '/docs/intro',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Socials',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Instgram',
+              href: 'https://www.instagram.com/_brile/',
             },
           ],
         },
@@ -121,7 +124,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
